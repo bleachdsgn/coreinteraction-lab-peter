@@ -1,0 +1,141 @@
+<!doctype html>
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<style>
+
+		body {
+
+			margin-left: 20px;
+
+		}
+
+		p {
+			
+			font-family: Futura, Univers, Helvetica, Arial;
+			font-weight: bold;
+			font-size: 70px;
+			line-height: 40px;
+
+		}
+
+		.smalltext {
+
+			font-size: 40px;
+			padding-top: 15px;
+
+		}
+
+		.night {
+
+			font-family: Futura, Univers, Helvetica, Arial;
+			font-weight: bold;
+			font-size: 20px;
+
+		}
+
+		.day {
+
+			font-family: Futura, Univers, Helvetica, Arial;
+			font-weight: bold;
+			font-size: 30px;
+			display: inline-block;
+			line-height: 0px;
+
+		}
+
+		.day:hover {
+
+			text-decoration: underline;
+			cursor: pointer; 
+
+		}
+
+		.outerdiv {
+
+			margin-top: 250px;
+			text-align: center;
+			display: block;
+
+		}
+
+		.blur {
+
+		    -webkit-filter: blur(20px);
+		    -moz-filter: blur(20px);
+		    -o-filter: blur(20px);
+		    filter: blur(20px);
+
+		}
+
+		.black {
+
+			background-color: black;
+
+		}
+
+		#mydiv {
+
+			display: inline-block;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+		<p class="day">
+			
+			Night
+
+		</p>
+
+		<div class="outerdiv">
+
+		<div id="mydiv" class="blur">
+
+			<p>how much longer</p>
+
+			<p>is my life?</p>
+
+			<p>a brief night...</p>
+
+			<p class="smalltext">餘命いくばくかある夜短し</p>
+
+		</div>
+
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<script>
+
+	$('#mydiv').hover(
+		function (){
+			$( this ).removeClass( 'blur' );
+		}, function () {
+			$( this ).addClass( 'blur' );
+		}
+	);
+
+	$('.day').click(function(){
+			$('body').toggleClass('black');
+			if($('body').hasClass('black')){
+			$(this).text('Day');
+			$('p').css("color", "#FFF");			
+		} else {
+			$(this).text('Night');
+			$('p').css("color", "#000");
+		}
+	});
+
+</script>
+
+
+
