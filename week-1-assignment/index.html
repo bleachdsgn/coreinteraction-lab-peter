@@ -12,62 +12,14 @@
 
 		}
 
-		p {
-			
-			font-family: Futura, Univers, Helvetica, Arial;
-			font-weight: bold;
-			font-size: 70px;
-			line-height: 40px;
+		body p {
 
+  			color: black;
 		}
 
-		.smalltext {
-
-			font-size: 40px;
-			padding-top: 15px;
-
-		}
-
-		.night {
-
-			font-family: Futura, Univers, Helvetica, Arial;
-			font-weight: bold;
-			font-size: 20px;
-
-		}
-
-		.day {
-
-			font-family: Futura, Univers, Helvetica, Arial;
-			font-weight: bold;
-			font-size: 30px;
-			display: inline-block;
-			line-height: 0px;
-
-		}
-
-		.day:hover {
-
-			text-decoration: underline;
-			cursor: pointer; 
-
-		}
-
-		.outerdiv {
-
-			margin-top: 250px;
-			text-align: center;
-			display: block;
-
-		}
-
-		.blur {
-
-		    -webkit-filter: blur(20px);
-		    -moz-filter: blur(20px);
-		    -o-filter: blur(20px);
-		    filter: blur(20px);
-
+		body.black p {
+  			
+  			color: white;
 		}
 
 		.black {
@@ -82,13 +34,73 @@
 
 		}
 
+		.outerdiv {
+
+			margin-top: 250px;
+			text-align: center;
+			display: block;
+
+		}
+
+		p {
+			
+			font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+			font-weight: bold;
+			font-size: 70px;
+			line-height: 40px;
+
+		}
+
+		.japanesetext {
+
+			font-size: 40px;
+			padding-top: 15px;
+
+		}
+
+		.day-night {
+
+			font-family: Futura, Univers, Helvetica, Arial;
+			font-weight: bold;
+			font-size: 30px;
+			display: inline-block;
+			line-height: 0px;
+			text-decoration: underline;
+
+		}
+
+		.day-night:hover {
+
+			cursor: pointer;
+			text-decoration: none; 
+
+		}
+
+		.blur {
+
+			-webkit-filter: blur(20px);
+		    -moz-filter: blur(20px);
+		    -o-filter: blur(20px);
+		    filter: blur(20px);
+
+		}
+
+		.blur:hover {
+
+			-webkit-filter: blur(0px);
+		    -moz-filter: blur(0px);
+		    -o-filter: blur(0px);
+		    filter: blur(0px);
+
+		}
+
 	</style>
 
 </head>
 
 <body>
 
-		<p class="day">
+		<p class="day-night">
 			
 			Night
 
@@ -104,7 +116,7 @@
 
 			<p>a brief night...</p>
 
-			<p class="smalltext">餘命いくばくかある夜短し</p>
+			<p class="japanesetext">餘命いくばくかある夜短し</p>
 
 		</div>
 
@@ -116,22 +128,12 @@
 
 <script>
 
-	$('#mydiv').hover(
-		function (){
-			$( this ).removeClass( 'blur' );
-		}, function () {
-			$( this ).addClass( 'blur' );
-		}
-	);
-
-	$('.day').click(function(){
+	$('.day-night').click(function(){
 			$('body').toggleClass('black');
 			if($('body').hasClass('black')){
 			$(this).text('Day');
-			$('p').css("color", "#FFF");			
 		} else {
 			$(this).text('Night');
-			$('p').css("color", "#000");
 		}
 	});
 
