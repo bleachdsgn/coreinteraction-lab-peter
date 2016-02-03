@@ -1,0 +1,196 @@
+<!doctype html>
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<style>
+
+		body {
+
+			margin-left: 20px;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+		}
+
+		body p {
+
+  			color: black;
+		}
+
+		body.black p {
+  			
+  			color: white;
+		}
+
+		.modern {
+
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+		}
+
+		.ancient {
+
+			font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+
+		}
+
+		.black {
+
+			background-color: black;
+
+		}
+
+		#mydiv {
+
+			display: inline-block;
+
+		}
+
+		.outerdiv {
+
+			margin-top: 200px;
+			text-align: center;
+			display: block;
+
+		}
+
+		p {
+
+			font-size: 50px;
+			line-height: 30px;
+
+		}
+
+		.japanesetext {
+
+			font-size: 20px;
+			padding-top: 15px;
+
+		}
+
+		.empty-full {
+
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 30px;
+			display: inline-block;
+			line-height: 0px;
+			text-decoration: underline;
+
+		}
+
+		.empty-full:hover {
+
+			cursor: pointer;
+			text-decoration: none; 
+
+		}
+
+		.empty-full:active {
+
+			color: red;
+		}
+
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.pulse {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.pulse:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 50s;
+  animation-duration: 50s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+	</style>
+
+</head>
+
+<body>
+
+		<p class="empty-full">
+			
+			Ancient
+
+		</p>
+
+		<div class="outerdiv">
+
+		<div id="mydiv" class="pulse">
+
+			<p>in memory of</p>
+
+			<p>the spring now passing</p>
+
+			<p>I drew</p>
+
+			<p>the long clusters of wisteria</p>
+
+			<p>that move like waves</p>
+
+			<p class="japanesetext">別れ行く春のかたみと藤波の花の</p>
+
+			<p class="japanesetext">長ふさ繪にかけるかも</p>
+
+		</div>
+
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<script>
+
+	$('.empty-full').click(function(){
+
+		if ($(this).text() == "Modern") { 
+			$(this).text("Ancient"); 
+		} else { 
+			$(this).text("Modern");
+
+
+		}
+			
+			$('#mydiv').toggleClass('ancient');
+
+
+	});
+
+</script>
+
+
+

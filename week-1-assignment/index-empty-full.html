@@ -36,7 +36,7 @@
 
 		.outerdiv {
 
-			margin-top: 250px;
+			margin-top: 180px;
 			text-align: center;
 			display: block;
 
@@ -45,8 +45,8 @@
 		p {
 			
 			font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-			font-size: 70px;
-			line-height: 40px;
+			font-size: 50px;
+			line-height: 30px;
 
 		}
 
@@ -57,7 +57,7 @@
 
 		}
 
-		.day-night {
+		.empty-full {
 
 			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-size: 30px;
@@ -67,34 +67,21 @@
 
 		}
 
-		.day-night:hover {
+		.empty-full:hover {
 
 			cursor: pointer;
 			text-decoration: none; 
 
 		}
 
-		.day-night:active {
+		.empty-full:active {
 
 			color: red;
 		}
 
-		.blur {
+		#mydiv p:hover {
 
-			-webkit-filter: blur(20px);
-		    -moz-filter: blur(20px);
-		    -o-filter: blur(20px);
-		    filter: blur(20px);
-
-		}
-
-		.blur:hover {
-
-			-webkit-filter: blur(0px);
-		    -moz-filter: blur(0px);
-		    -o-filter: blur(0px);
-		    filter: blur(0px);
-
+			color: pink;
 		}
 
 	</style>
@@ -103,23 +90,29 @@
 
 <body>
 
-		<p class="day-night">
+		<p class="empty-full">
 			
-			Night
+			Empty
 
 		</p>
 
 		<div class="outerdiv">
 
-		<div id="mydiv" class="blur">
+		<div id="mydiv">
 
-			<p>how much longer</p>
+			<p>the wall iris</p>
 
-			<p>is my life?</p>
+			<p>opens its buds:</p>
 
-			<p>a brief night...</p>
+			<p>before my eyes</p>
 
-			<p class="japanesetext">餘命いくばくかある夜短し</p>
+			<p>the last spring</p>
+
+			<p>begins to fade</p>
+
+			<p class="japanesetext">いちはつの花咲きいでて我目には</p>
+
+			<p class="japanesetext">今年ばかりの春行かんとす</p>
 
 		</div>
 
@@ -131,13 +124,16 @@
 
 <script>
 
-	$('.day-night').click(function(){
-			$('body').toggleClass('black');
-			if($('body').hasClass('black')){
-			$(this).text('Day');
-		} else {
-			$(this).text('Night');
+	$('.empty-full').click(function(){
+
+		if ($(this).text() == "Full") { 
+			$(this).text("Empty"); 
+		} else { 
+			$(this).text("Full");
 		}
+
+		$('#mydiv').fadeToggle(3000);
+
 	});
 
 </script>
