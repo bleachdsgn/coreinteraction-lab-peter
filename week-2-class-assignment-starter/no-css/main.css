@@ -1,0 +1,69 @@
+body {
+	background: lightblue;
+	font-family: Arial;
+}
+
+div {
+
+	text-align: center;
+
+}
+
+.header {
+
+	font-size: 30px;
+	margin: 20px;
+
+}
+
+.desert {
+
+	background: orange;
+	color: brown;
+
+}
+
+.jungle {
+
+	background: darkgreen;
+	color: yellow;
+}
+
+.city {
+
+	background: gray;
+	color: white;
+
+}
+
+.place.desert {
+ 
+	border: 20px solid yellow;
+
+}
+
+.place.jungle {
+ 
+	border: 20px solid green;
+
+}
+
+.place.city {
+ 
+	border: 20px solid black;
+
+}
+
+.place-footer {
+
+	margin: 20px;
+	padding: 20px;
+}
+
+.place {
+
+	padding: 20px;
+}
+
+
+
