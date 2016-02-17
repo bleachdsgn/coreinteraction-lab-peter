@@ -31,14 +31,14 @@
 		#mydiv {
 
 			display: inline-block;
+			top: 50%;
 
 		}
 
 		.outerdiv {
 
-			margin-top: 250px;
 			text-align: center;
-			display: block;
+			vertical-align: middle;
 
 		}
 
@@ -61,9 +61,10 @@
 
 			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-size: 30px;
-			display: inline-block;
-			line-height: 0px;
 			text-decoration: underline;
+			position: fixed;
+			z-index: 3;
+
 
 		}
 
@@ -94,6 +95,12 @@
 		    -moz-filter: blur(0px);
 		    -o-filter: blur(0px);
 		    filter: blur(0px);
+
+		}
+
+		::-webkit-scrollbar { 
+
+    		display: none; 
 
 		}
 
