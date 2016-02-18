@@ -1,0 +1,26 @@
+body {
+
+	margin: 0;
+
+}
+
+.square {
+
+	height: 400px;
+	width: 400px;
+	background: rgb( 88, 136, 221 );
+	margin: 5px;
+	position: relative;
+
+}
+
+.smallsquare {
+
+	width: 50%;
+	background: rgb( 246, 206, 87 );
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+
+}

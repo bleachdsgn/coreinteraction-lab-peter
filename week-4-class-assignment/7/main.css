@@ -1,0 +1,15 @@
+body {
+
+	margin: 0;
+
+}
+
+.square {
+
+	width: 400px;
+	height: 100px;
+	right: 0px;
+	background: rgb( 88, 136, 221 );
+	position: fixed;
+
+}

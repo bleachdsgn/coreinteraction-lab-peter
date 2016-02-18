@@ -1,0 +1,21 @@
+body {
+
+	margin: 0;
+
+}
+
+.rectangle {
+
+	height: 100px;
+	width: 500px;
+	background: rgb( 88, 136, 221 );
+	margin: 5px;
+
+}
+
+.offset {
+
+	position: relative;
+	left: 30px;
+
+}
