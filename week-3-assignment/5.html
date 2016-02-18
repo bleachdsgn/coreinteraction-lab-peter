@@ -15,10 +15,11 @@ body {
 .outer {
 
 	background: rgb(246, 120, 148);
-	position: absolute;
-	width: 500px;
-	height: 100%;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
 	right: 0px;
+	width: 350px;
 
 }
 
@@ -26,22 +27,22 @@ body {
 
 	background: rgb(36, 246, 163);
 	position: absolute;
-	bottom: 0px;
+	bottom: 5px;
+	right: 5px;
+	left: 5px;
 	height: 200px;
-	width: 480px;
-	margin: 10px;
 
 }
 
 .circle {
 
-	height: 100px;
+	height: 60px;
 	width: 100px;
 	background: rgb(75, 127, 232);
 	border-radius: 50%;
 	top: 50%;
-	left:50%;
-	margin-top: -50px;
+	left: 50%;
+	margin-top: -30px;
 	margin-left: -50px;
 	position: absolute;
 
@@ -50,9 +51,15 @@ body {
 .smallrectangles {
 
 	background: rgb(75, 127, 232);
-	height: 50px;
-	width: 480px;
-	margin: 10px;
+	height: 45px;
+	margin: 5px;
+
+}
+
+.offset {
+
+	position: relative;
+	left: 30px;
 
 }
 
@@ -68,14 +75,14 @@ body {
 
 		<div class="smallrectangles"></div>
 
-		<div class="smallrectangles"></div>
-		<div class="smallrectangles"></div>
-
+		<div class="smallrectangles offset"></div>
 		<div class="smallrectangles"></div>
 
 		<div class="smallrectangles"></div>
 
 		<div class="smallrectangles"></div>
+
+		<div class="smallrectangles offset"></div>
 
 		<div class="smallrectangles"></div>
 
