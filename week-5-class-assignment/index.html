@@ -1,0 +1,89 @@
+<!doctype html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+	<div class="text">
+
+		<form>
+			<input type="radio" name="color" value="green" onClick="changeColor('green')" checked>GREEN<br>
+		  	<input type="radio" name="color" value="gold" onClick="changeColor('gold')">GOLD<br>
+		</form>
+	</div>
+
+	<div class="backdrop"></div>
+
+	<div class="box">
+		<div>
+			<img src="images/beth-lesser-dancehall-INT-list.jpg">
+			Nice
+		</div>
+
+	</div>
+
+	<div class="flex-container">
+
+	 	<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-list.jpg">
+
+		<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-2.jpg">
+
+		<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-3.jpg">
+		<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-5.jpg">
+		<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-6.jpg">
+		<img href="#" class="lightbox images" src="images/beth-lesser-dancehall-INT-8.jpg">
+		<img href="#" class="lightbox images" src="images/from-roots-to-dancehall-beth-lessers-love-letter-to-jamaica-body-image-1452690807.jpg">
+		<img href="#" class="lightbox images" src="images/from-roots-to-dancehall-beth-lessers-love-letter-to-jamaica-body-image-1452690885.jpg">
+		<img href="#" class="lightbox images" src="images/from-roots-to-dancehall-beth-lessers-love-letter-to-jamaica-body-image-1452690897.jpg">
+
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+ 
+		$('.lightbox').click(function(){
+			$('.backdrop, .box').animate({'opacity':'.50'}, 300, 'linear');
+			$('.box').animate({'opacity':'1.00'}, 300, 'linear');
+			$('.backdrop, .box').css('display', 'block');
+		});
+ 
+		$('.backdrop').click(function(){
+			close_box();
+		});
+ 
+	});
+ 
+	function close_box()
+	{
+		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
+			$('.backdrop, .box').css('display', 'none');
+		});
+	}
+
+	function changeColor(value)
+	{
+	    var color = document.body.style.backgroundColor;
+	    switch(value)
+	    {
+	        case 'green':
+	            color = "rgb(0,155,58)";
+	        break;
+	        case 'gold':
+	            color = "rgb(254,209,58)";
+	        break;
+	    }
+	    document.body.style.backgroundColor = color;
+	}
+
+</script>
